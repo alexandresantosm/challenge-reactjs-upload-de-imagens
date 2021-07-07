@@ -22,6 +22,17 @@ type GetImagesResponse = {
 };
 
 export default function Home(): JSX.Element {
+  // TODO AXIOS REQUEST WITH PARAM
+  async function fetchImages({ pageParam = null }): Promise<GetImagesResponse> {
+    const { data } = await api('/api/images', {
+      params: {
+        after: pageParam,
+      },
+    });
+
+    return data;
+  }
+
   const {
     data,
     isLoading,
