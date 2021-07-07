@@ -8,6 +8,19 @@ import { api } from '../services/api';
 import { Loading } from '../components/Loading';
 import { Error } from '../components/Error';
 
+type Image = {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  ts: number;
+};
+
+type GetImagesResponse = {
+  after: string;
+  data: Image[];
+};
+
 export default function Home(): JSX.Element {
   const {
     data,
