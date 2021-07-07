@@ -79,7 +79,7 @@ Ela realiza requisições para a própria API Next.js e retorna dados do faunaDB
 <br>
 
 <video width="900" height="450" controls>
-  <source alt="Vídeo demonstrativo do Upfi" src="./.github/upfi-video.mp4" />
+  <source alt="Vídeo demonstrativo do Upfi" src=".github/upfi-video.mp4" />
 </video>
 
 <br><br>
