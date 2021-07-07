@@ -98,6 +98,11 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
       });
     } catch {
       // TODO SHOW ERROR TOAST IF SUBMIT FAILED
+      toast({
+        title: 'Falha no cadastro',
+        description: 'Ocorreu um erro ao tentar cadastrar a sua imagem.',
+        status: 'error',
+      });
     } finally {
       // TODO CLEAN FORM, STATES AND CLOSE MODAL
     }
