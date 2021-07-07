@@ -7,6 +7,12 @@ import { api } from '../../services/api';
 import { FileInput } from '../Input/FileInput';
 import { TextInput } from '../Input/TextInput';
 
+type NewImageData = {
+  title: string;
+  description: string;
+  url: string;
+};
+
 interface FormAddImageProps {
   closeModal: () => void;
 }
@@ -105,6 +111,10 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
       });
     } finally {
       // TODO CLEAN FORM, STATES AND CLOSE MODAL
+      reset();
+      setImageUrl('');
+      setLocalImageUrl('');
+      closeModal();
     }
   };
 
